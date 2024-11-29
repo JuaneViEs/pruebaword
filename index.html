@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Constancias</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.24.0/docxtemplater.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        /* Estilo para el cuadro de soporte en la parte superior derecha */
+        #soporteContacto {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border: 2px solid #151515;
+            padding: 15px;
+            background-color: rgba(249, 249, 249, 0.8); /* Fondo transparente */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 4px; /* Bordes redondeados más pequeños */
+            text-align: center;
+            z-index: 1000;
+            width: 250px;
+        }
+
+        #soporteContacto h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #151515;
+        }
+
+        #soporteContacto select {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        #soporteContacto a {
+            display: none;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #151515;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+        }
+
+        #soporteContacto a:hover {
+            background-color: #151515;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal donde se encuentra el formulario -->
+    <div class="main-content">
+        <h1>Generador de Constancias</h1>
+        <div id="loginContainer">
+            <input type="password" id="password" placeholder="Ingrese contraseña">
+            <button id="entrarBtn">Entrar</button>
+            <div id="passwordError" class="hidden">Contraseña incorrecta</div>
+        </div>
+        
+        <div id="formContainer" class="hidden">
+            <label for="fileInput">Seleccionar archivo CSV:</label>
+            <input type="file" id="fileInput" accept=".csv">
+            <div id="cedulaContainer" class="hidden">
+                <label for="cedulaInput">Ingrese Cédula o ID:</label>
+                <input type="text" id="cedulaInput" placeholder="Ingrese Cédula o ID">
+                <button id="buscarBtn">Buscar</button>
+                <button id="regresarBtn" class="hidden">Regresar</button>
+                <button id="generateBtn" class="hidden">Generar Constancia (Word)</button>
+            </div>
+            <div id="resultado" class="hidden"></div>
+        </div>
+    </div>
+
+    <div id="constanciaContainer" class="hidden">
+        <div class="constancia">
+            <h2>CONSTANCIA:</h2>
+            <button id="regresarConstanciaBtn" class="small-button">Regresar</button>
+        </div>
+    </div>
+
+    <!-- Soporte de contacto en la parte superior derecha -->
+    <div id="soporteContacto">
+        <h3>Soporte Técnico</h3>
+        <select id="soporteSelect">
+            <option value="">-- Elige una opción --</option>
+            <option value="telegram">Soporte por Telegram</option>
+            <option value="email">Soporte por Correo Electrónico</option>
+        </select>
+
+        <!-- Enlace de soporte -->
+        <a id="soporteEnlace" href="#" target="_blank"></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

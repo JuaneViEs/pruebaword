@@ -1,0 +1,159 @@
+body {
+    font-family: Times New Roman, sans-serif;
+    background-image: url('images/images7.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda el fondo */
+    background-position: top center; /* Coloca la imagen en la parte superior central */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen para que no se desplace al hacer scroll */
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el body tenga altura completa */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+}
+
+/* Estilos para el encabezado */
+header {
+    width: 100%;
+    height: 150px; /* Ajusta la altura del encabezado */
+    background-image: url('images/images3.PNG'); /* Ruta de la imagen del encabezado */
+    background-size: cover; /* Hace que la imagen cubra el fondo */
+    background-position: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* No se fija, solo está en la parte superior */
+    z-index: 100;
+}
+
+
+/* Contenedor principal con el contenido */
+.main-content {
+    flex: 1; /* Permite que el contenido ocupe el espacio restante entre el encabezado y el pie de página */
+    background-color: #151515;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido para el contenido */
+    padding: 15px; /* Reducido el padding para hacerlo más compacto */
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    width: 20%; /* Ajusta el tamaño del contenido */
+    max-width: 1000px; /* Limita el ancho máximo */
+    margin-top: 40px; /* Ajustado para subir más el contenido */
+    height: auto; /* Asegura que la altura sea automática y no se estire */
+    display: flex;
+    flex-direction: column; /* Apilar los elementos de forma vertical */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* Opcional: Si tienes botones u otros elementos que también necesitan estilo */
+.main-content button {
+    margin-top: 10px; /* Espacio entre los elementos (botones) */
+    padding: 10px 20px; /* Tamaño de los botones */
+    background-color: #151515; /* Color de fondo de los botones */
+    color: white; /* Color del texto en los botones */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-content button:hover {
+    background-color: #45a049; /* Color al pasar el mouse */
+}
+
+/* Estilos para el contenedor */
+.container {
+    background: linear-gradient(to bottom, #a8c7e6, #20C5FA); /* Degradado de azul claro a azul más oscuro */
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    margin-top: 170px; /* Ajustamos el margen superior para no cubrir el encabezado */
+}
+
+/* Ocultar elementos con la clase hidden */
+.hidden {
+    display: none;
+}
+
+/* Estilo de los botones */
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    background-color: #040405;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el botón pequeño */
+.small-button {
+    padding: 5px 10px;
+    margin-top: 20px;
+}
+
+/* Estilos para los inputs */
+input {
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo de la constancia */
+.constancia {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin: auto;
+    text-align: left;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 20px 0;
+}
+
+
+/* Estilos para el pie de página */
+footer {
+    width: 100%;
+    height: 48px; /* Ajusta la altura según lo que necesites */
+    background-image: url('images/images4.PNG'); /* Ruta de la imagen del pie de página */
+    background-size: contain; /* Asegura que la imagen cubra todo el fondo */
+    background-repeat: no-repeat;
+    background-position: center; /* Centra la imagen */
+    color: white;
+    text-align: center;
+    padding: 0px 0; /* Ajusta el espacio interno */
+    position: fixed; /* Hace que el pie de página esté fijo en la parte inferior */
+    bottom: 0; /* Asegura que esté pegado a la parte inferior */
+    left: 0; /* Asegura que esté alineado a la izquierda */
+    z-index: 1000; /* Asegura que el pie de página esté por encima de otros elementos */
+}
+
+/* Estilo para el texto dentro del pie de página */
+footer p {
+    margin: 0;
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Si quieres que el texto sea en negritas */
+}
+
